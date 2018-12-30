@@ -18,15 +18,13 @@ nameinput.send_keys(name)
 password.send_keys(pwd)
 aclogin=driver.find_element_by_name("btn-login")
 aclogin.click()
-newUrl=driver.current_url
+
 checkrespBtn=driver.find_element_by_xpath('//*[@id="bodyProfile"]/a[1]/input')
 checkrespBtn.click()
 
-newUrl=driver.current_url
-
 clas=driver.find_element_by_id('answers')
 clasdown=clas.find_elements_by_class_name('ansx')
-print(clasdown)
+
 for classes in clasdown:
     print(classes.text)
     print("\n")
